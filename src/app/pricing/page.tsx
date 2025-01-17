@@ -29,19 +29,19 @@ export default function PricingCards({}: PricingCardsProps) {
     <div className="flex flex-col justify-center items-center md:flex-row gap-3 w-full max-w-6xl mx-auto">
       {pricingCards.map((card) => (
         <Card key={card.title} className="w-[80%] p-5">
-          <CardHeader className="text-white bg-slate-900 rounded-sm mb-2">
+          <CardHeader className="text-white bg-amber-950 rounded-sm mb-2">
             <CardTitle className="text-4xl">{card.title}</CardTitle>
             <CardDescription className="text-sm ">
               {card.description}
             </CardDescription>
           </CardHeader>
-          <CardContent className={cn("text-2xl text-green")}>
+          <CardContent className={cn("text-2xl")}>
             {card.price}/-Tsh
           </CardContent>
           <CardFooter>
             <Dialog>
               <DialogTrigger>
-                <Button>Agiza</Button>
+                <Button className="bg-yellow-700">Agiza</Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>

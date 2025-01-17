@@ -17,7 +17,7 @@ export default function Home() {
                 <Link href={"/Pricing"}>Pricing</Link>
               </Button>
               <Button className="bg-neutral-500">
-                <Link href={"/Contact"}>Sim</Link>
+                <Link href={"/contact"}>Contact</Link>
               </Button>
             </div>
           </GlassCard>
