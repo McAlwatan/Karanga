@@ -1,14 +1,12 @@
-import BackdropGradient from "@/components/global/backdrop-gradient";
+import PricingCards from "./pricing/page";
 import GlassCard from "@/components/global/glass-card";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
-import PricingCards from "./pricing/page";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      <nav className="sticky top-0 z-50 w-full">
+      <nav className="md:sticky top-0 z-50 w-full">
         <div className="flex items-center justify-center p-3">
           <GlassCard className="p-3 w-auto">
             <div className="flex justify-between w-[250px]">
@@ -26,10 +24,8 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="flex-1 justify-center w-full bg-amber-100 p-4 mt-4">
-        <PricingCards className="w-full">
-          Hello
-        </PricingCards>
+      <main className="flex-1 justify-center w-full bg-slate-100 p-4 mt-4">
+        <PricingCards className="w-full" />
       </main>
     </div>
   );
