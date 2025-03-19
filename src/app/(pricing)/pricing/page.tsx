@@ -1,5 +1,6 @@
 "use client";
 
+import CounterInput from "@/components/global/counter-input";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -17,14 +18,27 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { useToast } from "@/hooks/use-toast";
 import { pricingCards } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import * as React from "react";
+import { useState } from "react";
 
 export interface PricingCardsProps {
   className?: string;
 }
-export default function PricingCards({}: PricingCardsProps) {
+export default function Pricing({}: PricingCardsProps) {
+  const [quantity, setQuantity] = useState(1);
+  const { toast } = useToast();
+
+  const handleSubmit = () => {
+    console.log("Submitted!");
+    toast({
+      title: "Order yako imewasilishwa",
+      description: `Umetoa order ya Karanga ${quantity}.`,
+    });
+  };
+
   return (
     <div className="flex flex-col justify-center items-center md:flex-row gap-3 w-full max-w-6xl mx-auto">
       {pricingCards.map((card) => (
@@ -43,12 +57,22 @@ export default function PricingCards({}: PricingCardsProps) {
               <DialogTrigger>
                 <Button className="bg-yellow-700">Agiza</Button>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="flex flex-col items-center justify-center text-center">
                 <DialogHeader>
-                  <DialogTitle>Weka kiasi</DialogTitle>
-                  <DialogDescription>
-                    This action cannot be undone. This will permanently delete
-                    your account and remove your data from our servers.
+                  <DialogTitle className="mb-4 items-center justify-center">
+                    Weka kiasi
+                  </DialogTitle>
+                  <DialogDescription className="nb-4">
+                    <CounterInput onChange={setQuantity} />
+                    <p className="mt-4">
+                      {" "}
+                      <Button
+                        onClick={handleSubmit}
+                        className="bg-green-600 hover:bg-dark-700"
+                      >
+                        Wasilisha kiasi
+                      </Button>
+                    </p>
                   </DialogDescription>
                 </DialogHeader>
               </DialogContent>

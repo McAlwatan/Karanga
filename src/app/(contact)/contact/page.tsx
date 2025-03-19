@@ -6,6 +6,8 @@ export interface ContactProps {
 
 export default function Contact({}: ContactProps) {
   return (
-    <div className="grid justify-items-center align-center">Contact Page</div>
+    <div className="grid justify-items-center align-center">
+      Contact Page
+    </div>
   );
 }

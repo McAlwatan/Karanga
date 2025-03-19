@@ -26,16 +26,16 @@ export const navBar = [
   {
     name: "Home",
     status: "active",
-    link: "/Home",
+    link: "/site",
   },
   {
     name: "Pricing",
     status: "passive",
-    link: "/Pricing",
+    link: "/pricing",
   },
   {
     name: "Contact",
     status: "passive",
-    link: "/Contact",
+    link: "/contact",
   },
 ];
