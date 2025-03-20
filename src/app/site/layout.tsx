@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../navbar/page";
 import { ThemeProvider } from "@/components/theme-provider";
 import Link from "next/link";
+import FooterPage from "../footer/page";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -10,6 +11,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
         <Link href="/site" />
         <Navbar />
         {children}
+        <FooterPage />
       </main>
     </ThemeProvider>
   );

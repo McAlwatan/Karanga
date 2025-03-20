@@ -41,6 +41,11 @@ export default function Navbar({ className }: NavbarProps) {
                 </Button>
 
                 {/* Mode Toggler */}
+                <Button>
+                  <Link href={"/sign-in"}>
+                    SignIn
+                  </Link>
+                </Button>
                 <Button
                   variant="outline"
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -76,17 +81,25 @@ export default function Navbar({ className }: NavbarProps) {
           </GlassCard>
 
           {/* Right Side: Mode Toggle */}
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          >
-            {theme === "dark" ? (
-              <Sun className="h-5 w-5" />
-            ) : (
-              <Moon className="h-5 w-5" />
-            )}
-          </Button>
+          <div className="flex gap">
+            <Button>
+              <Link href={"/sign-in"}>
+                SignIn
+              </Link>
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+              {theme === "dark" ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </Button>
+          </div>
+          
         </div>
       </div>
     </nav>
