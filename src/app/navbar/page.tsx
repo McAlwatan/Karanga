@@ -81,8 +81,8 @@ export default function Navbar({ className }: NavbarProps) {
           </GlassCard>
 
           {/* Right Side: Mode Toggle */}
-          <div className="flex gap">
-            <Button>
+          <div className="flex gap-2">
+            <Button variant="default">
               <Link href={"/sign-in"}>
                 SignIn
               </Link>

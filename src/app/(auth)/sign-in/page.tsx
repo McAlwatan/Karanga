@@ -4,12 +4,14 @@ import Link from "next/link";
 const SignInPage = () => {
   return (
     <>
-      <h5 className="font-bold text-base text-themeTextWhite">SignIn</h5>
+      <h5 className="font-bold text-base text-themeTextWhite text-[30px] mb-2">SignIn</h5>
       <p className="text-themeTextGray leading-tight mb-3">
-        Network with people from around the world, join groups, create your own,
-        watch courses and become the best version of yourself.
+        Welcome back to the community. Login to see the opportunities awaiting you!.
       </p>
-      <Input />
+      <p className="text-[18px]">Username / email</p>
+      <Input className="mb-3"/>
+      <p className="text-[18px]">Password</p>
+      <Input name="password" type="password"/>
       <div className="my-10 w-full relative">
         <div className="p-3 absolute text-themeTextGray text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           OR CONTINUE WITH

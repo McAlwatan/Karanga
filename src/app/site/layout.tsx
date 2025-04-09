@@ -11,7 +11,6 @@ const layout = ({ children }: { children: React.ReactNode }) => {
         <Link href="/site" />
         <Navbar />
         {children}
-        <FooterPage />
       </main>
     </ThemeProvider>
   );

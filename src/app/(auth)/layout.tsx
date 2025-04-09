@@ -11,7 +11,7 @@ const AuthLayout = async ({ children }: Props) => {
     <div className="container h-screen flex justify-center items-center">
       <div className="flex flex-col w-full items-center py-24">
         <h2 className="text-4xl font-bold text-themeTextWhite">
-          <Link href={"/site"}>Karanga.</Link>
+          <Link href={"/site"}>ClickWork.</Link>
         </h2>
 
         <BackdropGradient

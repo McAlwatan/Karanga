@@ -9,6 +9,13 @@ const SignUpPage = () => {
         Network with people from around the world, join groups, create your own,
         watch courses and become the best version of yourself.
       </p>
+      <p className="text-[18px]">Email</p>
+      <Input />
+      <p className="text-[18px]">Username</p>
+      <Input />
+      <p className="text-[18px]">Password</p>
+      <Input />
+      <p className="text-[18px]">Confirm Password</p>
       <Input />
       <div className="my-10 w-full relative">
         <div className="bg-black p-3 absolute text-themeTextGray text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
