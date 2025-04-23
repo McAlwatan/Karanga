@@ -34,7 +34,7 @@ export default function Navbar({ className }: NavbarProps) {
                   <Link href="/site">Home</Link>
                 </Button>
                 <Button variant="outline">
-                  <Link href="/pricing">Pricing</Link>
+                  <Link href="/pricing">Preview</Link>
                 </Button>
                 <Button variant="outline">
                   <Link href="/contact">Contact</Link>
@@ -51,7 +51,7 @@ export default function Navbar({ className }: NavbarProps) {
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 >
                   {theme === "dark" ? (
-                    <Sun className="h-5 w-5" />
+                    <Sun className="h-5 w-5" suppressHydrationWarning/>
                   ) : (
                     <Moon className="h-5 w-5" />
                   )}
@@ -73,7 +73,7 @@ export default function Navbar({ className }: NavbarProps) {
               <Link href="/site">Home</Link>
             </Button>
             <Button variant="secondary">
-              <Link href="/pricing">Pricing</Link>
+              <Link href="/pricing">Preview</Link>
             </Button>
             <Button variant="secondary">
               <Link href="/contact">Contact</Link>
@@ -93,7 +93,7 @@ export default function Navbar({ className }: NavbarProps) {
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
               {theme === "dark" ? (
-                <Sun className="h-5 w-5" />
+                <Sun className="h-5 w-5" suppressHydrationWarning={true}/>
               ) : (
                 <Moon className="h-5 w-5" />
               )}
